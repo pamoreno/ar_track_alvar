@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+
+<robot name="camera">
+
+  <link name="base_link">
+  </link>
+
+  <link name="camera_frame">
+  </link>
+
+  <joint name="pan" type="revolute">
+    <parent link="base_link"/>
+    <child link="camera_frame"/>
+    <origin xyz="0 0 0.0031" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.5" upper="1.5" velocity="0.5"/>
+  </joint>
+</robot>
